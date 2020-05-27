@@ -843,9 +843,12 @@ var sonMayores = ages.every(checkAdult);
 ```js
 var numeros = [1, 2, 3]
 var total = numeros.reduce(function (sum, current) {
+   console.log(sum,current) 
   return sum + current;
 }, 0);
+
 var total2 = numeros.reduce(function (sum, current) {
+	console.log(sum,current)
   return sum - current;
 });
 ```
