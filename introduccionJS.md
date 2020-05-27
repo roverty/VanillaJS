@@ -586,7 +586,9 @@ cars[0] = "Opel"; // Cambiando el elemento de la pos cero.
 ```js
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.length;   // the length of fruits is 4 
-fruits.sort();
+fruits.sort(); // puede recibir una funcion
+fruits.reverse();
+frutis.join() // Convierte el arreglo en string
 fruit.push("Grapes")
 fruits.pop();              // Removes the last element ("Mango") from fruits 
 fruits.shift();            // Removes the first element "Banana" from fruits 
@@ -594,6 +596,7 @@ fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
 fruits.splice(0, 1);        // Removes the first element of fruits 
 fruits.splice(2, 0, "Lemon", "Kiwi"); // Add elements "lemon" and "kiwi" at index 2 and removes 0 elements
 var last = fruits[fruits.length - 1];
+fruits.slice() // copia de arreglo
 
 Array.isArray(fruits);   // returns true 
 fruits instanceof Array;   // returns true 
@@ -759,3 +762,114 @@ saludar("rhod")
 
 ```
 
+##  Map, Filter y Reduce
+
+### Ejemplo con Sort()
+
+```js
+var persona1 = {
+	nombre : "Mike",
+	apellido: "Peaterson"
+}
+
+var persona2 = {
+	nombre : "Rodrigo",
+	apellido: "Lopez"
+}
+
+var persona3 = {
+	nombre : "Armando",
+	apellido: "Flores"
+}
+
+var personas = [persona1,persona2,persona3]
+
+personas.sort((p1,p2) => {
+	const pA = p1.nombre.toUpperCase();
+	const pB = p2.nombre.toUpperCase();
+
+	let comparison = 0;
+	if (pA > pB) {
+	comparison = 1;
+	} else if (pA < pB) {
+	comparison = -1;
+	}
+	return comparison;
+})
+```
+
+### Spread 
+
+```js
+const parts = ['shoulders', 'knees']; 
+const lyrics = ['head', ...parts, 'and', 'toes']; 
+//  ["head", "shoulders", "knees", "and", "toes"]
+
+const arr2 = [...arr]; // like arr.slice() // copy array
+```
+
+### Map
+
+```js
+let numbers = [0, 1, 2, 5, 10];
+numbers.map( num =>{
+	return num*2
+});
+```
+
+## Filter
+
+```js
+numbers.filter ( num => {
+	return num > 2
+	continue
+})
+```
+
+### Every
+
+Si todos los elementos del arreglo cumplen cierta condición regresa verdadero, caso contrario regresa falso
+
+```js
+var ages = [32, 33, 18, 40];
+function checkAdult(age) {
+  return age >= 18;
+}
+var sonMayores = ages.every(checkAdult);
+```
+
+### Reduce
+
+```js
+var numeros = [1, 2, 3]
+var total = numeros.reduce(function (sum, current) {
+  return sum + current;
+}, 0);
+var total2 = numeros.reduce(function (sum, current) {
+  return sum - current;
+});
+```
+
+### Some
+
+Revisa si alguno de los elementos cumple con cierta condición.
+
+Si alguno de los elementos cumple, regresa true, en caso contrario regresa false
+
+```js
+var ages = [32, 33, 18, 40];
+function checkAdult(age) {
+  return age >= 18;
+}
+var sonMayores = ages.some(checkAdult);
+```
+
+### for each
+
+```js
+var total = 0;
+
+[1, 2, 3].forEach(function (num) {
+  total += num;
+});
+```
