@@ -117,3 +117,18 @@ setTimeout(()=> {
 }, 1000);
 
 */
+
+/*
+function time(num=3) {
+	let i = 0;
+	let id = setInterval(()=> {
+		if (i>num) {
+			clearInterval(id);
+		}
+		console.log(i++)
+	}, 1000);
+	
+}
+
+time()
+*/
