@@ -114,8 +114,53 @@ hr {
 	border-radius: 5px;
 }
 
+#section__hero {
+	
+}
+
 #container__section {
 	background-color: white;
 	margin: 20px 20px;
 	border-radius: 10px;
 }
+
+
+
+#section__hero img {
+	float: left;
+	width: 20%;
+	padding: 20px;
+	background-color: white;
+	border: 10px solid #e4e4e4;
+	margin-left: 20px;
+	border-radius: 10px;
+}
+
+
+.container__hero {
+	margin-left: 27%;
+	padding: 0 20px;
+}
+
+.container__hero h2 {
+	color: #d92027;
+}
+
+
+.container__hero p:first-child {
+	opacity: 0.6;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.space {
+	height: 450px;
+}
+
+/*
+.container__hero p:nth-child(3) {
+	opacity: 0.6;
+}
+*/
