@@ -78,11 +78,6 @@ a:active {
 
 /* Empezando el blog */
 
-.container__article {
-	background-color: white;
-	border-radius: 10px;
-}
-
 .container__info {
 	float: left;
 	padding: 10px;
