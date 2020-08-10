@@ -171,3 +171,19 @@ console.log(result); // 22
 ```
 __Tip__: Puedes ingresar los datos desde un input y con un botón los agregas a un arreglo, cuando el usuario ingrese cero devuelves la suma en consola.
 
+### Ejercicio 12
+Detectar si una cadena es palíndromo o no.
+
+```js
+function palindrome(cadena) {
+	// here your code
+
+	// return boolean;
+}
+
+if (palindrome()) {
+	console.log("It's palindrome");
+} else {
+	console.log("It isn't palindrome");
+}
+```
