@@ -52,6 +52,7 @@ const edad = 22
 //   return { nombre: nombre, edad: edad }
 // }
 
+// Se usa en VueJS
 const objPersonaMaker = (nombre, edad) => ({ nombre: nombre, edad: edad })
 const persona = objPersonaMaker(nombre, edad)
 console.log(persona)
