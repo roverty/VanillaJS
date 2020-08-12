@@ -4,12 +4,12 @@ class Persona {
   }
   funNormal() {
     setTimeout(function () {
-      console.log('Funcion normal: ', this.nombre)
+      console.log('Funcion normal: ', this.name)
     }, 1000)
   }
   funArrow() {
     setTimeout(() => {
-      console.log('Funcion flecha: ', this.nombre)
+      console.log('Funcion flecha: ', this.name)
     }, 1000)
   }
 }
