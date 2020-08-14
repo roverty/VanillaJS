@@ -940,6 +940,179 @@ console.log(...arr)
 
 ### Composición de funciones
 
+Al hablar de composición de funciones debemos recordar nuestras clases de *pre-cálculo* porque la idea es la misma. De acuerdo el sitio web *hackermoon*:
+
+> **La composición de funciones** es un concepto matemátrico que nos permite combinar 2 o más funciones en una nueva función.
+
+Recordemos que la notación para composición de funciones es : $f \circ g \; (x)$, lo cual significa $f(g(x))$ 
+
+**NOTA:**  Probablemente la notación matemática no se renderize bien en Github, por lo cual recomiendo descargar el archivo y abrirlo con [Typora](https://typora.io/), el cual esta disponible para los 3 sistemas operativos.
+
+En resumen trataremos de emular $f(g(x))$  y expresarlo en la mejor forma posible.
+
+Sigamos el ejemplo de abajo
+
+```js
+// funcion m
+const head = (array) => array[0]
+
+// funcion h
+const propiedadesAMayusculas = (obj) => ({
+  nombre: obj.nombre.toUpperCase(),
+  apellidos: obj.apellidos.toUpperCase(),
+  edad: obj.edad,
+})
+
+// funcion g
+const combinarNombre = (obj) => ({
+  nombreCompleto: `${obj.nombre} ${obj.apellidos}`,
+  edad: obj.edad,
+})
+
+// funcion f
+const esMayorEdad = (obj) => obj.edad >= 18
+
+const personas = [
+  { nombre: 'Rodrigo', apellidos: 'Francisco', edad: 18 },
+  { nombre: 'Ricardo', apellidos: 'Sanchez', edad: 80 },
+  { nombre: 'Manuel', apellidos: 'Gonzales', edad: 16 },
+]
+
+// f(g(h(m(personas))))
+const resultado = esMayorEdad(
+  combinarNombre(propiedadesAMayusculas(head(personas)))
+)
+
+console.log(resultado)
+```
+
+En la línea donde se hace la encadenazación de funciones:
+
+```js
+// f(g(h(m(personas))))
+const resultado = esMayorEdad(
+  combinarNombre(propiedadesAMayusculas(head(personas)))
+)
+```
+
+Vemos que la sintaxis comienza a hacerse confusa. ¿Qué podemos hacer?
+
+**Ejemplo con Reduce**
+
+```js
+const numeros = [1, 3, 4, 6]
+const total = numeros.reduce((sum, current) => {
+  console.log(sum, current)
+  return sum + current
+}, 0)
+
+console.log(total)
+```
+
+**Ejemplo con reduceRight**
+
+Hace lo mismo que reduce solo que empezando de derecha a izquierda
+
+```js
+const numeros = [1, 3, 4, 6]
+const total = numeros.reduceRight((sum, current) => {
+  console.log(sum, current)
+  return sum + current
+}, 0)
+
+console.log(total)
+```
+
+**Creando nuestra propia función `compose`**
+
+`composite` es una función que normalemente proveen dos librerías distitnas de programación funcional
+
+* Lodash
+* Ramda
+
+No las vamos a usar, en lugar de ello crearemos nuestra propia implementación de `compose`
+
+```js
+// Implementacion de compose
+const compose = (...funs) => (fnParam) =>
+  funs.reduceRight((acum, currentFun) => currentFun(acum), fnParam)
+```
+
+Con todo lo aprendido intenta describir cómo funciona a mayor detalle la función `compose`
+
+Uso de nuestra función `compose`
+
+```js
+const resultado2 = compose(
+  esMayorEdad,
+  combinarNombre,
+  propiedadesAMayusculas,
+  head
+)(personas)
+
+console.log('TAG:RESULTADO2', resultado2)
+```
+
+**Ejemplo completamente matemático**
+
+```js
+const g = (x) => x + 2
+const h = (x) => x / 2
+const i = (x) => x ** 2
+
+const fNested = (x) => g(h(i(x)))
+
+const res3 = compose(g, h, i)(2)
+
+console.log(fNested(2))
+console.log(res3)
+```
+
+**Cómo utilizar la composición para sustituir el concepto de herencia?**
+
+Veamos el siguiente ejemplo
+
+```js
+// Design object thinking of what they are
+// inheritance
+
+// Design object thinking of waht they do
+
+const barker = (state) => ({
+  bark: () => console.log(`Woof, I am ${state.name}`),
+})
+
+const driver = (state) => ({
+  drive: () => (state.position = state.position + state.speed),
+})
+
+const killer = (state) => ({
+  kill: () => console.log(`I am ${state.name} and I shall kill u all`),
+})
+
+const dog = barker({ name: 'lala' })
+dog.bark()
+
+const murderRobotDog = (name) => {
+  let state = {
+    name,
+    speed: 100,
+    position: 0,
+  }
+  // obj assign takes properties (and methods) of given parentesis
+  //and asign them into first parameter
+  return Object.assign({}, barker(state), driver(state), killer(state))
+}
+
+murderRobotDog('cofin').bark()
+murderRobotDog('cofin').kill()
+
+```
+
+¿Se debería usar composición de funciones en JS en lugar de herencia? En mi opinión, por lo menos ej JS creo que sí pese a que estamos muy acostumbrados a utilizar *herencia*. La razón es que JS y lo que usualmente escribimos en JS lo permiten y lo hacen ver natural. Probablemente este patrón no funcionaría tan bien en Java o Kotlin. Además, son lenguajes más estrictos y la idea probablemente no les gustaría.
+
+VueJS utiliza esta concepto para implementar  ` vuex`, una biblioteca de ellos mismo para conservar y comunicar estados entre componentes.
+
 ### Referencias
 
 * [An introduction to functional programming in JavaScript](https://opensource.com/article/17/6/functional-javascript)
