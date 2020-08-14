@@ -1035,7 +1035,7 @@ No las vamos a usar, en lugar de ello crearemos nuestra propia implementación d
 ```js
 // Implementacion de compose
 const compose = (...funs) => (fnParam) =>
-  funs.reduceRight((acum, currentFun) => currentFun(acum), fnParam)
+  funs.WreduceRight((acum, currentFun) => currentFun(acum), fnParam)
 ```
 
 Con todo lo aprendido intenta describir cómo funciona a mayor detalle la función `compose`
