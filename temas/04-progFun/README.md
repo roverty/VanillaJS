@@ -637,9 +637,308 @@ Prueba agregado `'use strict'` en la primera línea de tu archivo.  Con ello ent
 
 Entre las cosas que enfatiza están
 
-* Prohibe totalmente asignar variables sin definirlas previamente.
+* Prohíbe totalmente asignar variables sin definirlas previamente.
 
 <!-- Refs: {check: manipulacion de arreglos en prog. func. ,url : https://opensource.com/article/17/6/functional-javascript } -->
+
+### Iterators 
+
+Antes de analizar el concepto de *iterators*. Veamos el uso de `for of`,
+
+`for of` nos permite trabajar un arreglos de JS de la misma manera que cómo se haría en un `for` de Python o en un `foreach` de Java. Analicemos el siguiente ejemplo:
+
+```js
+const abc = ['a', 'b', 'c']
+for (const letra of abc) {
+  console.log(letra)
+}
+```
+
+Lo que hace `for of` es crear un ciclo iterativo sobre `objetos iterables`. 
+
+Para que un objeto sea iterable tiene que utilizar o implementar el protocolo `iterator`.
+
+* Existen más objetos iterables de los que nos podríamos imaginar. 
+  * String, Array, Map, Set, etc.
+* Los objetos creados por el usuario no implementan este protocolo
+
+Generalmente utilizar colecciones que implementen este protocolo es lo común, pero iremos un paso más allá.
+
+Comprenderemos como funciona la sentencia `for ... of`
+
+Los **iterators**, en JS son objetos que definen una secuencia. 
+
+* Estos objetos se caracterizan por tener un único método llamado `next()`. Que regresa dos propiedades
+  * **value**: El siguiente valor de la secuencia
+  * **done**: Es un booleano que se vuelve verdadero si la secuencia ha sido consumida por completo.
+
+**Obteniendo el iterador de un Arreglo**
+
+Veamos que hace la siguiente porción de código
+
+```js
+const abcInterator = abc[Symbol.iterator]() 
+console.log(abcInterator)
+console.log(abcInterator.next())
+console.log(abcInterator.next())
+console.log(abcInterator.next())
+console.log(abcInterator.next())
+```
+
+* La primera línea obtiene una función iteradora
+  * Notése que se utiliza la notación  de corchete (`[]`) en lugar de la notación punto
+    * Esto se debe a que manda a llamar a la función con un nombre de primera vista desconocemos pero que esta definido dentro de `Symbol.iterator`
+    * Recordemos que los `Symbols` son un tipo de dato inmutable  de JS.
+* Ahora, bien, el objeto que hemos recuperado tiene una única función llamada `next()`
+  * Dicha función nos devuelve el siguiente valor del arreglo y así sucesivamente hasta que la secuencia se termina.
+
+**¿Qué pasa si queremos construir nuestro propio *iterator*?**
+
+Construir una función que regrese los primeros *n* números naturales elevados al cuadrado
+
+```js
+function cuadrado(num) {
+  let n = 0
+  return {
+    next() {
+      n++
+      if (n <= num) {
+        return {
+          value: n * n,
+          done: false,
+        }
+      }
+      return {
+        value: undefined,
+        done: true,
+      }
+    },
+  }
+}
+
+let cuadradoIterator = cuadrado(3)
+console.log(cuadradoIterator.next())
+console.log(cuadradoIterator.next())
+console.log(cuadradoIterator.next())
+```
+
+**¿Qué pasa si queremos que nuestro código se pueda usar en un `for of`?**
+
+* Para ello nuestra función debe de regresar un objeto que tenga el método `[Symbol.iterator]` ya que todo aquel objeto que implemente este método se considera iterable.
+
+```js
+function cuadrado(num) {
+  return {
+    [Symbol.iterator]() {
+      let n = 0
+      return {
+        next() {
+          n++
+          if (n <= num) {
+            return {
+              value: n * n,
+              done: false,
+            }
+          }
+          return {
+            value: undefined,
+            done: true,
+          }
+        },
+      }
+    },
+  }
+}
+
+for (const cuad of cuadrado(4)) {
+  console.log(cuad)
+}
+```
+
+**Array destructing (De-estructuración de arreglos)**
+
+¿Cuál es la salida del siguiente código?
+
+```js
+const [a,b,c] = ['a', 'b', 'c']
+```
+
+```js
+//Output
+// a = 'a'
+// b = 'b'
+// c = 'c'
+```
+
+* Cada variable del lado izquierdo se le asigna un elemento del arreglo siguiente el orden en el que aparecen las variables del lado izquierdo.
+  * Por ejemplo, la primera variable del lado izquierdo es `a` y por ello se le asigna lo que contiene el elemento `0` del arreglo. Y así sucesivamente
+
+La de-estructuración funciona gracias a los iteratores, por lo que es posible hacer lo siguiente:
+
+```js
+const [num1, num2, num3] = cuadrado(3) // Se usa la función que se definió previamente.
+console.log(num1, num2, num3)
+```
+
+**Iterators para objetos creados a partir de clases definidas por el usuario**
+
+Un objeto definido por el usuario por defecto no tiene la propiedad *iterator*, pero podemos implementarla como se aprecia en la siguiente porción de código.
+
+```js
+class NumerosMaker {
+  constructor() {
+    this.numeros = [1, 2, 3, 4]
+  }
+  [Symbol.iterator]() {
+    const numeros = this.numeros
+    let index = -1
+    return {
+      next() {
+        return {
+          value: numeros[++index],
+          done: index >= numeros.length,
+        }
+      },
+    }
+  }
+}
+
+const numeros = new NumerosMaker()[Symbol.iterator]()
+console.log(numeros.next())
+console.log(numeros.next())
+
+for (const num of new NumerosMaker()) {
+  console.log(num)
+}
+```
+
+### Generators
+
+Los generadores son *iterators* con una sintaxis más sencilla (Suggar syntax). Analicemos el siguiente ejemplo
+
+```js
+function* numerosMaker() {
+  yield 1
+  yield 2
+  yield 3
+  // return false
+  yield 4
+}
+
+let nums = numerosMaker()
+console.log(nums.next())
+console.log(nums.next())
+console.log(nums.next())
+console.log(nums.next())
+console.log(nums.next())
+```
+
+* Un generador es una función y la podemos reconocer porque tiene un asterisco (`*`) después la palabra `function`.
+* `yield` acompañada de un elemento es el valor que devolverá la función next() al ser invocada.
+  * En el ejemplo la primera vez que se llama a `next()` se devuelve 1.
+  * Luego, si se llama de nuevo a `next()` se duelve 2, que es el siguiente valor de la función usando `yield`
+
+* Recordemos que al llamar a `next()` se devuelve un objeto con un `value` y un estado llamado `done`
+  * Sí la función generadora, tiene un `return` antes de un `yield` entonces `done` se cambiará a true y por lo tanto `value` tendrá el valor de `undefined` o de lo que regrese `return`
+
+**Hagamos que un objeto pueda ser iterable**
+
+```js
+let contador = -1
+let personaItMaker = {
+  [Symbol.iterator]: function (obj) {
+    return {
+      next() {
+        contador++
+        switch (contador) {
+          case 0:
+            return { value: obj.nombre, done: false }
+            break
+          case 1:
+            return { value: obj.apellidos, done: false }
+            break
+          case 2:
+            return { value: obj.edad, done: false }
+            break
+          default:
+            return { value: undefined, done: true }
+            break
+        }
+      },
+    }
+  },
+}
+
+let persona = {
+  nombre: 'Rodrigo',
+  apellidos: 'Gutierritos',
+  edad: 12,
+}
+
+const pit = personaItMaker[Symbol.iterator](persona)
+
+console.log(pit.next())
+console.log(pit.next())
+console.log(pit.next())
+console.log(pit.next())
+```
+
+El código de arriba falla si intento utilizar en un `for of`,  ¿Qué debo hacer para solucionarlo?
+
+*Hint*: Utilizar  *generators*
+
+Inspirarse en la siguiente porción de código;
+
+```js
+const myIterable = {
+    *[Symbol.iterator]() {
+        yield 1;
+        yield 2;
+        yield 3;
+    }
+}
+
+for (let value of myIterable) { 
+    console.log(value); 
+}
+```
+
+**Hackeando el protocolo *iterator* definido en el prototipo de los arreglos**
+
+```js
+function iterator() {
+  let index = 0
+  return {
+    next: () => {
+      index++
+      switch (index) {
+        case 1:
+          return { value: '😠', done: false }
+          break
+        case 2:
+          return { value: '😧', done: false }
+          break
+        case 3:
+          return { value: '😞', done: false }
+          break
+        default:
+          return { value: '😄', done: true }
+          break
+      }
+    },
+  }
+}
+console.log('works')
+
+Array.prototype[Symbol.iterator] = iterator
+
+const arr = [1, 2, 3]
+// Explicar spread operator
+console.log(...arr)
+// Nos damos cuenta que spread operator también usa iterators
+```
+
+### Composición de funciones
 
 ### Referencias
 
