@@ -1,0 +1,16 @@
+{
+  "name": "pokeApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "3_index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^9.2.0"
+  }
+}
