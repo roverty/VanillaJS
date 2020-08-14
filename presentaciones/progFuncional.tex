@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% I, the copyright holder of this work, release this work into the
+%% public domain. This applies worldwide. In some countries this may
+%% not be legally possible; if so: I grant anyone the right to use
+%% this work for any purpose, without any conditions, unless such
+%% conditions are required by law.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[aspectratio=169]{beamer}
+\usetheme[faculty=fi]{fibeamer}
+\usepackage[utf8]{inputenc}
+\usepackage[
+  main=spanish, %% By using `czech` or `slovak` as the main locale
+                %% instead of `english`, you can typeset the
+                %% presentation in either Czech or Slovak,
+                %% respectively.
+  english,czech, slovak %% The additional keys allow foreign texts to be
+]{babel}        %% typeset as follows:
+%%
+%%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
+%%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
+%%
+%% These macros specify information about the presentation
+\title{Curso JS \\ Itersemestral 2021-1 [Online]} %% that will be typeset on the
+\subtitle{Tema 04: Programación funcional} %% title page.
+\author{
+  Rodrigo Francisco \\
+}
+%% These additional packages are used within the document:
+\usepackage{ragged2e}  % `\justifying` text
+\usepackage{booktabs}  % Tables
+\usepackage{tabularx}
+\usepackage{tikz}      % Diagrams
+\usetikzlibrary{calc, shapes, backgrounds}
+\usepackage{amsmath, amssymb}
+\usepackage{url}       % `\url`s
+\usepackage{listings}  % Code listings
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\graphicspath{ {../introduccionJS.assets/} }
+\frenchspacing
+
+\begin{document}
+  \shorthandoff{-}
+  \frame[c]{\maketitle}
+
+  \AtBeginSection[]{% Print an outline at the beginning of sections
+    \begin{frame}<beamer>
+      %\frametitle{Contenido de la sección \thesection}
+      \frametitle{Agenda}
+        {\small \tableofcontents[currentsection]}
+    \end{frame}}
+
+  \begin{darkframes}
+    \section{Iterators}
+    \section{Generators}
+    \section{Composición de funciones}
+   
+  \end{darkframes}
+
+\end{document}
