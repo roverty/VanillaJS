@@ -7,6 +7,8 @@ No se puede utilizar la palabra reservada class, las propiedades tiene que ser p
 
 ### Ejercicio 2
 Explorar la API de rick and morty o alguna otra de tu agrado y mostrar información de algun personaje en **consola**.
+- Con funciones de callback, con promesas y con async await
+https://rickandmortyapi.com/api/character/
 
 ### Ejercicio 3
 Explorar la API de rick and morty o alguna otra de tu agrado y mostrar información de algun personaje en la **ventana del navegador**.
@@ -100,3 +102,6 @@ console.log(obj2);
 }
 */
 ```
+
+### Ejercicio 8
+Hacer una aplicación de escritorio con electron con la aplicación que desarrollaste en el ejercicio 3
