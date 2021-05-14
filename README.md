@@ -1,6 +1,6 @@
 # Introducción a JS
 
-![JavaScript Tutorial - An Ultimate Guide for Beginners](introduccionJS.assets/download.png)
+![JavaScript Tutorial - An Ultimate Guide for Beginners](img/download.png)
 
 ## ¿Qué es Javascript?
 
@@ -14,7 +14,7 @@
 - El nombre oficial del lenguaje es ECMAScript.
 - Fue inventado en 1995 por Brendan Eich
 - JS originalmente se creo para "darle vida" a los navegadores, es decir, para hacerlo más interactivos.
-- JS nació cómo un lenguaje del lado del cliente, es decir que solo se podía ejecutar en navegadores web. Actualmente se puede ejcutar JS en  aplicaciones de escritorio, dispositivos móviles y en aplicaciones de escritorio.
+- JS nació cómo un lenguaje del lado del cliente, es decir que solo se podía ejecutar en navegadores web. Actualmente se puede ejcutar JS en aplicaciones de escritorio, dispositivos móviles y en aplicaciones de escritorio.
 
 ## ¿Por qué aprender JS?
 
@@ -24,7 +24,7 @@
 
 - Existen librerías/paquetes desarrolladas por la comunidad para casi todo tipo de requerimientos y lo mejor de todo es que casi siempre encontraremos dichos paquetes en un solo lugar **npm**.
 
-  ![npm - Node Package Manager Vinyl Stickers - Just Stickers : Just Stickers](introduccionJS.assets/download-1589848489734.jpeg)
+  ![npm - Node Package Manager Vinyl Stickers - Just Stickers : Just Stickers](img/download-1589848489734.jpeg)
 
 - ### Ventajas
 
@@ -36,17 +36,17 @@
 
 ### Desventajas
 
-* Vulnerabilidades del lado del cliente. Al ser un lenguaje del lado del cliente en ocasiones se suelen encontrar un bug que puede ser explotado para propósitos malicisos.
+- Vulnerabilidades del lado del cliente. Al ser un lenguaje del lado del cliente en ocasiones se suelen encontrar un bug que puede ser explotado para propósitos malicisos.
 
-* Soporte de navegadores. En pleno 2020 esto ya no es una desventaja, actualmente todos los navegadores soportan JS en sus últimas versiones.
+- Soporte de navegadores. En pleno 2020 esto ya no es una desventaja, actualmente todos los navegadores soportan JS en sus últimas versiones.
 
-* Tricky language. A veces un puede tener dolores de cabeza al debugear un programa escrito en JS por que a veces hace varias asumpciones implicitas, por ejemplo, si se compara 3 y '3' dara como resultado que son verdaderos, es decir:
+- Tricky language. A veces un puede tener dolores de cabeza al debugear un programa escrito en JS por que a veces hace varias asumpciones implicitas, por ejemplo, si se compara 3 y '3' dara como resultado que son verdaderos, es decir:
 
   ```js
-  if (3 == '3'){
-      console.log("Se cumplió la condición")
-  }else{
-      console.log("No se cumplió la condición")
+  if (3 == "3") {
+    console.log("Se cumplió la condición");
+  } else {
+    console.log("No se cumplió la condición");
   }
   ```
 
@@ -56,7 +56,7 @@
 
 En las primeras versión del lenguaje hasta la versión ES5, no se incorporaban clases ni exponenciación en la versión ES6.
 
-Sin embargo las clases se implementaban a través de la palabra reservada `function`. 
+Sin embargo las clases se implementaban a través de la palabra reservada `function`.
 
 ES6 tiene las siguientes características:
 
@@ -69,79 +69,79 @@ ES6 tiene las siguientes características:
 - `Array.findIndex()`
 - Exponentiation (`**`) (EcmaScript 2016)
 
-## Motores de JS 
+## Motores de JS
 
 ECMAScript es desarrollado por Google, Mozilla y Microsoft principalmente y cada uno de ellos ha creado su propio motor de JS.
 
-* Spider Monkey es el nombre del motor de JS de Mozilla, uno de los primer en crearse.
-* V8 es el motor de JS de Google Chrome
-* Jscript es desarrollado por Microsoft para soportar JS en su navegador (Edge browser) y también para su sistema operativo.
+- Spider Monkey es el nombre del motor de JS de Mozilla, uno de los primer en crearse.
+- V8 es el motor de JS de Google Chrome
+- Jscript es desarrollado por Microsoft para soportar JS en su navegador (Edge browser) y también para su sistema operativo.
 
 ## Frameworks y librerías más famosas de JS
 
-* NodeJS. Es un entorno de desarrollo cuya base es el V8, el motor de JS de Google.
+- NodeJS. Es un entorno de desarrollo cuya base es el V8, el motor de JS de Google.
 
-  ![Node.js - What Is It Best Used For? | Railsware Blog](introduccionJS.assets/download-1589848721549.png)
+  ![Node.js - What Is It Best Used For? | Railsware Blog](img/download-1589848721549.png)
 
-* React JS
+- React JS
 
-  ![5 reasons to choose Facebook's ReactJS - Valuecoders -Expert Remote Teams for your Web & Mobile ...](introduccionJS.assets/download-1589848600255.png)
+  ![5 reasons to choose Facebook's ReactJS - Valuecoders -Expert Remote Teams for your Web & Mobile ...](img/download-1589848600255.png)
 
-* Angular JS
+- Angular JS
 
-  ![img](introduccionJS.assets/download-1589848617237.jpeg)
+  ![img](img/download-1589848617237.jpeg)
 
-* Vue JS
+- Vue JS
 
-  ![https://cdn-images-1.medium.com/max/2000/1*PHmNXbvOfg5AHiMWWuaRXg.jpeg](introduccionJS.assets/1_PHmNXbvOfg5AHiMWWuaRXg.jpeg)
+  ![https://cdn-images-1.medium.com/max/2000/1*PHmNXbvOfg5AHiMWWuaRXg.jpeg](img/1_PHmNXbvOfg5AHiMWWuaRXg.jpeg)
 
-* jQuery
+- jQuery
 
-* React Native
+- React Native
 
-  ![img](introduccionJS.assets/download-1589848634568.jpeg)
+  ![img](img/download-1589848634568.jpeg)
 
-* Express JS
+- Express JS
 
-  ![NodeJS : ExpressJS Session Management](introduccionJS.assets/download-1589848665697.jpeg)
+  ![NodeJS : ExpressJS Session Management](img/download-1589848665697.jpeg)
 
-* Electron JS. Algunas aplicaciones que desarrolladas en electron son Geogebra, Typora, Atom.
+- Electron JS. Algunas aplicaciones que desarrolladas en electron son Geogebra, Typora, Atom.
 
-  ![Electron | Build cross platform desktop apps with JavaScript, HTML, and CSS.](introduccionJS.assets/download-1589848564857.png)
+  ![Electron | Build cross platform desktop apps with JavaScript, HTML, and CSS.](img/download-1589848564857.png)
 
 ## Herramientas para ejecutar JS
 
-* [JavaScript.com](https://www.javascript.com/try)
-* [PlayCode](https://playcode.io/)
-* [ES6 console.com](https://es6console.com/)
-* [jsconsole.com](https://jsconsole.com/)
-* [jsfiddle](https://jsfiddle.net/)
-* [Plunker](https://plnkr.co/)
-* [JSbin](https://jsbin.com/?html,output)
-* [CodePen](https://codepen.io/)
-* [Stackblitz](https://stackblitz.com/)
+- [JavaScript.com](https://www.javascript.com/try)
+- [PlayCode](https://playcode.io/)
+- [ES6 console.com](https://es6console.com/)
+- [jsconsole.com](https://jsconsole.com/)
+- [jsfiddle](https://jsfiddle.net/)
+- [Plunker](https://plnkr.co/)
+- [JSbin](https://jsbin.com/?html,output)
+- [CodePen](https://codepen.io/)
+- [Stackblitz](https://stackblitz.com/)
 
 ## Typescript
 
 TypeScript es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. Es un estricto superconjunto sintáctico de JavaScript y agrega una escritura estática opcional al lenguaje. TypeScript está diseñado para el desarrollo de grandes aplicaciones y transcompilaciones a JavaScript.
 
-![4 High-Level Languages for Front-End Developers | HuffPost](introduccionJS.assets/download.jpeg)
+![4 High-Level Languages for Front-End Developers | HuffPost](img/download.jpeg)
 
 ## ¿Dónde encontrar información?
 
-* La mejor documentación que he tenido oportunidad de leer está en la página  de desarolladores de Mozilla.
-  * [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  * [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-* [w3schools.com](https://www.w3schools.com/Js/)
-* [javascript.info](https://javascript.info/)
-* [What the f*ck is JavaScript?](https://github.com/denysdovhan/wtfjs)
-* [jshero](https://www.jshero.net/en/success.html)
+- La mejor documentación que he tenido oportunidad de leer está en la página de desarolladores de Mozilla.
+  - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- [w3schools.com](https://www.w3schools.com/Js/)
+- [javascript.info](https://javascript.info/)
+- [What the f\*ck is JavaScript?](https://github.com/denysdovhan/wtfjs)
+- [jshero](https://www.jshero.net/en/success.html)
 
 ## Sintaxis básica
 
-* JS es case-sensitive, sensible a mayúsculas y minúsculas
-* Usa el conjunto de caracteres Unicode
-* El punto y coma (;) son es necesario para separar sentencias (instrucciones).
+- JS es case-sensitive, sensible a mayúsculas y minúsculas
+- Usa el conjunto de caracteres Unicode
+- El punto y coma (;) son es necesario para separar sentencias (instrucciones).
 
 Un programa de computadora es una lista de "instrucciones" para ser "ejecutadas" por una computadora.
 
@@ -150,15 +150,15 @@ En un lenguaje de programación, estas instrucciones de programación se denomin
 Un programa de JavaScript es una lista de declaraciones de programación.
 
 ```js
-var x, y, z;    // Statement 1
-x = 5;          // Statement 2
-y = 6;          // Statement 3
-z = x + y;      // Statement 4
+var x, y, z; // Statement 1
+x = 5; // Statement 2
+y = 6; // Statement 3
+z = x + y; // Statement 4
 ```
 
 **Algunas palabras reservadas del lenguaje son**
 
-![reservadas](introduccionJS.assets/reservadas.png)
+![reservadas](img/reservadas.png)
 
 ### Comentarios
 
@@ -166,15 +166,15 @@ Los comentarios existen en todos los lenguajes de programación y nos sencillame
 
 Para poner comentarios en JS tenemos las siguientes opciones.
 
-* Comentario de una línea, se utiliza `//`
-* Comentario de multiples líneas: Tiene un inicio y un fin
-  * El inicio se denota con `/*` y el fin com `*/`
+- Comentario de una línea, se utiliza `//`
+- Comentario de multiples líneas: Tiene un inicio y un fin
+  - El inicio se denota con `/*` y el fin com `*/`
 
 ```js
 // Comentario de una línea
 /*
 	Comentario
-	de varias 
+	de varias
 	líneas
 */
 // Lo siguiente fallará
@@ -190,21 +190,21 @@ Para poner comentarios en JS tenemos las siguientes opciones.
 
 Una variable es donde se guarda (y se recupera) datos que se utilizan en un programa.
 
-![variable](introduccionJS.assets/variable.png)
+![variable](img/variable.png)
 
 Para declarar una variable en JS se puede hacer de 3 formas
 
-* Utilizando la palabra reservada `var`
-* Utilizando la palabra reservada `const`
-* Utilizando la palabra reservada `let`
+- Utilizando la palabra reservada `var`
+- Utilizando la palabra reservada `const`
+- Utilizando la palabra reservada `let`
 
 ```js
-var x, y, z;       // Declarando variables
-var X = 2 		   // Case-sensitive
-x = 5; y = 6.34;      // Asignando valores
-z = x + y;         // Calcular y asignar valores.
+var x, y, z; // Declarando variables
+var X = 2; // Case-sensitive
+x = 5;
+y = 6.34; // Asignando valores
+z = x + y; // Calcular y asignar valores.
 ```
-
 
 En JavaScript, los identificadores se usan para nombrar variables (y palabras clave, funciones y etiquetas). Las reglas para los nombres legales son muy similares en la mayoría de los lenguajes de programación.
 
@@ -214,7 +214,7 @@ Las reglas generales para construir nombres para variables (identificadores úni
 
 - Los nombres pueden contener letras, dígitos, guiones bajos y signos de dólar.
 - Los nombres deben comenzar con una letra
-- Los nombres también pueden comenzar con $ y _ 
+- Los nombres también pueden comenzar con $ y \_
 - Los nombres distinguen entre mayúsculas y minúsculas (y e Y son variables diferentes)
 - Las palabras reservadas (como las palabras clave de JavaScript) no se pueden usar como nombres
 
@@ -230,7 +230,7 @@ var _100 = 5;
 Debido a que js trabaja con el el conjunto de caracteres Unicode lo siguiente es válido:
 
 ```js
-var Früh = "foobar"
+var Früh = "foobar";
 ```
 
 Sin embargo no es una buena práctica utilizar caracteres diferentes a los del abecedario americano.
@@ -239,20 +239,20 @@ Javascript es un lenguaje de tipado dinámico y por ello no es necesario convert
 
 ```js
 var answer = 42;
-answer = 'Thanks for all the fish...';
+answer = "Thanks for all the fish...";
 ```
 
 **El último estándar ECMAScript define ocho tipos de datos:**
 
-*  Siete tipos de datos que son primitivos:
-  * *Boolean* verdadero y falso.
-  * *null*. Una palabra clave especial que denota un valor nulo. 
-  * *undefined* Una propiedad de nivel superior cuyo valor no está definido.
-  * *Number*. Un número entero o de coma flotante. Por ejemplo: 42 o 3.14159.
-  * BigInt. Un entero con precisión arbitraria. Por ejemplo: 9007199254740992n.
-  * *String*. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
-  * *Símbolo* (nuevo en ECMAScript 2015). Un tipo de datos cuyas instancias son únicas e inmutables.
-* y *Object*
+- Siete tipos de datos que son primitivos:
+- _Boolean_ verdadero y falso.
+- _null_. Una palabra clave especial que denota un valor nulo.
+- _undefined_ Una propiedad de nivel superior cuyo valor no está definido.
+- _Number_. Un número entero o de coma flotante. Por ejemplo: 42 o 3.14159.
+- BigInt. Un entero con precisión arbitraria. Por ejemplo: 9007199254740992n.
+- _String_. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
+- _Símbolo_ (nuevo en ECMAScript 2015). Un tipo de datos cuyas instancias son únicas e inmutables.
+- y _Object_
 
 Las clases y las funciones se considerar objetos en JS.
 
@@ -264,21 +264,21 @@ Una variable sin valor asignado tiene por defecto el valor de `undefined`
 
 ```js
 var a;
-console.log('The value of a is ' + a); // The value of a is undefined
+console.log("The value of a is " + a); // The value of a is undefined
 ```
 
 El valor `undefined` se comporta como falso cuando se usa en un contexto booleano.
 
 ```js
-var name
-if (!name) console.log("La variable no tiene algún valor asignado"); 
+var name;
+if (!name) console.log("La variable no tiene algún valor asignado");
 ```
 
 El valor indefinido se convierte a `NaN` cuando se usa en contexto numérico.
 
 ```js
 var a;
-a + 2;  // Evaluates to NaN
+a + 2; // Evaluates to NaN
 ```
 
 Cuando evalúa una variable nula, el valor nulo se comporta como 0 en contextos numéricos y como falso en contextos booleanos.
@@ -291,16 +291,18 @@ console.log(n * 32); // Will log 0 to the console
 En expresiones que involucran valores numéricos y de cadena con el operador `+`, JavaScript convierte los valores numéricos en cadenas.
 
 ```js
-x = 'The answer is ' + 42 // "The answer is 42"
-y = 42 + ' is the answer' // "42 is the answer"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 Con todos los demás operadores, JavaScript no convierte los valores numéricos en cadenas.
 
 ```js
-'37' - 7 // 30
-'37' + 7 // "377"
-+'37' + 7 // 44
+"37" - 7; // 30
+"37" +
+  7 + // "377"
+  "37" +
+  7; // 44
 ```
 
 ### Numbers
@@ -318,40 +320,38 @@ Los tipos Number y BigInt se pueden escribir en decimal (base 10), hexadecimal (
 La parte exponente es una "e" o "E" seguida de un número entero, que se puede firmar (precedido por "+" o "-"). Un literal de coma flotante debe tener al menos un dígito y un punto decimal o "e" (o "E").
 
 ```js
-0, 117, -345, 123456789123456789n             //(decimal, base 10)
-015, 0001, -0o77, 0o777777777777n             //(octal, base 8) 
-0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  //(hexadecimal, "hex" or base 16)
-0b11, 0b0011, -0b11, 0b11101001010101010101n  //(binary, base 2)
+0, 117, -345, 123456789123456789n; //(decimal, base 10)
+015, 0001, -0o77, 0o777777777777n; //(octal, base 8)
+0x1123, 0x00111, -0xf1a7, 0x123456789abcdefn; //(hexadecimal, "hex" or base 16)
+0b11, 0b0011, -0b11, 0b11101001010101010101n; //(binary, base 2)
 
 // Numeros de punto flotante (Decimales)
-3.1415926
--.123456789
--3.1E+12  // Similar a notación científica
-.1e-23
+3.1415926 - 0.123456789 - 3.1e12; // Similar a notación científica
+0.1e-23;
 ```
 
 #### Separadores de números
 
-Para mejorar la legibilidad de los literales numéricos, se pueden usar guiones bajos ( _ ) como separadores:
+Para mejorar la legibilidad de los literales numéricos, se pueden usar guiones bajos ( \_ ) como separadores:
 
 ```js
 // separators in decimal numbers
-1_000_000_000_000
-1_050.95
+1_000_000_000_000;
+1_050.95;
 
 // separators in binary numbers
-0b1010_0001_1000_0101
+0b1010_0001_1000_0101;
 
 // separators in octal numbers
-0o2_2_5_6
+0o2_2_5_6;
 ```
 
 `Infinity` (o -`Infinity`) es el valor que JavaScript devolverá si calcula un número fuera del mayor número posible.
 
 ```js
-var x =  2 / 0;       // x will be Infinity
-var y = -2 / 0;       // y will be -Infinity 
-typeof Infinity;     // returns "number" 
+var x = 2 / 0; // x will be Infinity
+var y = -2 / 0; // y will be -Infinity
+typeof Infinity; // returns "number"
 ```
 
 #### Math
@@ -363,31 +363,33 @@ https://www.w3schools.com/js/js_math.asp
 Un literal de cadena tiene cero o más caracteres encerrados entre comillas dobles (") o simples ('). Una cadena debe estar delimitada por comillas del mismo tipo (es decir, comillas simples o ambas comillas dobles) .
 
 ```js
-'foo'
-"bar"
-"John's cat"
-"John's' cat"
+"foo";
+"bar";
+"John's cat";
+"John's' cat";
 ```
 
 Puede llamar a cualquiera de los métodos del objeto String en un valor literal de cadena. JavaScript convierte automáticamente el literal de cadena en un objeto de cadena temporal, llama al método y luego descarta el objeto de cadena temporal.
 
 ```js
-"Esta cadena se convierte a obj si se le aplica un método del Obj String".length
+"Esta cadena se convierte a obj si se le aplica un método del Obj String"
+  .length;
 ```
 
 #### Template literals
 
-Desde ES5 las *template literals* están disponibles en JS y nos permiten crear cadenas de multilínea e interpolar variables con el texto.
+Desde ES5 las _template literals_ están disponibles en JS y nos permiten crear cadenas de multilínea e interpolar variables con el texto.
 
 ```js
 // Multiline strings
 var templateLit = `In JavaScript, template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`
+ quoted strings cannot.`;
 
 // String interpolation
-var name = 'Bob', time = 'today';
-`Hello ${name}, how are you ${time}?`
+var name = "Bob",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 ```
 
 La interpolación de cadenas es útil a la hora de construir peticiones a servicios web.
@@ -396,10 +398,10 @@ La interpolación de cadenas es útil a la hora de construir peticiones a servic
 
 Además de los caracteres ordinarios, también puede incluir caracteres especiales en cadenas.
 
-![caracteres](introduccionJS.assets/caracteres.png)
+![caracteres](img/caracteres.png)
 
 ```js
-'one line \n another line'
+"one line \n another line";
 ```
 
 #### Escando caracteres
@@ -407,35 +409,36 @@ Además de los caracteres ordinarios, también puede incluir caracteres especial
 Puede insertar una comilla dentro de una cadena precediéndola con una barra diagonal inversa. Esto se conoce como escapar de las comillas.
 
 ```js
-var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
-var home = 'c:\\temp';
+var quote = 'He read "The Cremation of Sam McGee" by R.W. Service.';
+var home = "c:\\temp";
 
-var str = 'this string \
+var str =
+  "this string \
 is broken \
 across multiple \
-lines.'
-console.log(str);   // this string is broken across multiple lines.
+lines.";
+console.log(str); // this string is broken across multiple lines.
 ```
 
 ## Control de flujo y operadores
 
 ### Operadores de comparación
 
-![comparación](introduccionJS.assets/comparacion.png)
+![comparación](img/comparacion.png)
 
 Los ejemplos se verán junto con la explicación de la sentencia `if`
 
 ### Operadores Aritmético
 
-![](introduccionJS.assets/aritmeticos.png)
+![](img/aritmeticos.png)
 
 ### Operadores bit a bit
 
-![](introduccionJS.assets/bitwise.png)
+![](img/bitwise.png)
 
 ### Operadores lógico
 
-![](introduccionJS.assets/logical.png)
+![](img/logical.png)
 
 Los ejemplos se verán junto con la explicación de la sentencia `if`
 
@@ -457,23 +460,23 @@ Los siguientes valores se evalúan como falsos (también conocidos como valores 
 Todos los demás valores, incluidos todos los objetos, se evalúan como verdaderos cuando se pasan a una declaración condicional.
 
 ```js
-var hour = 16
+var hour = 16;
 if (hour < 18) {
   console.log("Good day");
-} 
-
-if (hour < 18) {
-	console.log("Good day");
-} else{
-   console.log("Good evening");
 }
 
 if (hour < 18) {
-	console.log("Good day");
-} else if(hour < 24){
-   console.log("Good evening");
+  console.log("Good day");
 } else {
-    console.log("More than midnight")
+  console.log("Good evening");
+}
+
+if (hour < 18) {
+  console.log("Good day");
+} else if (hour < 24) {
+  console.log("Good evening");
+} else {
+  console.log("More than midnight");
 }
 ```
 
@@ -484,8 +487,8 @@ El operador condicional es el único operador de JavaScript que toma tres operan
 Si la condición es verdadera, el operador tiene el valor que esta después del signo de interrogación. De lo contrario, tiene el valor que está después de los 2 puntos.
 
 ```js
-var age = 20
-var status = (age >= 18) ? 'adult' : 'minor';
+var age = 20;
+var status = age >= 18 ? "adult" : "minor";
 ```
 
 #### switch
@@ -494,44 +497,43 @@ La instrucción `switch` permite que un programa evalúe una expresión e intent
 
 ```js
 switch (fruittype) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-    console.log('Mangoes are $0.56 a pound.');
+  case "Mangoes":
+    console.log("Mangoes are $0.56 a pound.");
     break;
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-   console.log(`Sorry, we are out of ${fruittype}.`);
+    console.log(`Sorry, we are out of ${fruittype}.`);
 }
 console.log("Is there anything else you'd like?");
 ```
 
-### Estructuras de iteración 
+### Estructuras de iteración
 
 #### for
 
 Un ciclo for se repite hasta que una condición especificada se evalúe como falsa. El ciclo for de JS es similar al ciclo for de Java y C.
 
 ```js
-for ([initialExpression]; [condition]; [incrementExpression])
-  statement
+for ([initialExpression]; [condition]; [incrementExpression]) statement;
 ```
 
 ```js
-for(var i = 0; i < 10 ; i++){
-	console.log(i*3);
+for (var i = 0; i < 10; i++) {
+  console.log(i * 3);
 }
 ```
 
@@ -540,11 +542,11 @@ for(var i = 0; i < 10 ; i++){
 Una sentencia while ejecuta sus sentencias siempre que una condición especificada se evalúe como verdadera.
 
 ```js
-var num = 0
+var num = 0;
 
-while (num < 10){
-    console.log(num)
-    num++
+while (num < 10) {
+  console.log(num);
+  num++;
 }
 ```
 
@@ -555,15 +557,13 @@ La instrucción do ... while se repite hasta que una condición específica se e
 La instrucción entre las llaves del `do` siempre se ejecuta una vez antes de comprobar la condición.
 
 ```js
-var num = 10
+var num = 10;
 
 do {
-    console.log(num)
-    num++
-}while (num < 10)
+  console.log(num);
+  num++;
+} while (num < 10);
 ```
-
-
 
 ## Arreglos
 
@@ -577,7 +577,7 @@ Para crear un array podemos hacerlo de la siguiente manera.
 
 ```js
 var cars = ["Saab", "Volvo", "BMW"];
-var name = cars[0];	// Accediendo a la posición 0 del arreglo := "Saab"
+var name = cars[0]; // Accediendo a la posición 0 del arreglo := "Saab"
 cars[0] = "Opel"; // Cambiando el elemento de la pos cero.
 ```
 
@@ -585,34 +585,34 @@ cars[0] = "Opel"; // Cambiando el elemento de la pos cero.
 
 ```js
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.length;   // the length of fruits is 4 
+fruits.length; // the length of fruits is 4
 fruits.sort(); // puede recibir una funcion
 fruits.reverse();
-frutis.join() // Convierte el arreglo en string
-fruit.push("Grapes")
-fruits.pop();              // Removes the last element ("Mango") from fruits 
-fruits.shift();            // Removes the first element "Banana" from fruits 
-fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits 
-fruits.splice(0, 1);        // Removes the first element of fruits 
+frutis.join(); // Convierte el arreglo en string
+fruit.push("Grapes");
+fruits.pop(); // Removes the last element ("Mango") from fruits
+fruits.shift(); // Removes the first element "Banana" from fruits
+fruits.unshift("Lemon"); // Adds a new element "Lemon" to fruits
+fruits.splice(0, 1); // Removes the first element of fruits
 fruits.splice(2, 0, "Lemon", "Kiwi"); // Add elements "lemon" and "kiwi" at index 2 and removes 0 elements
 var last = fruits[fruits.length - 1];
-fruits.slice() // copia de arreglo
+fruits.slice(); // copia de arreglo
 
-Array.isArray(fruits);   // returns true 
-fruits instanceof Array;   // returns true 
+Array.isArray(fruits); // returns true
+fruits instanceof Array; // returns true
 
 // Destructing (Desestructuración)
-var foo = ['one', 'two', 'three'];
+var foo = ["one", "two", "three"];
 
 // without destructuring
-var one   = foo[0];
-var two   = foo[1];
+var one = foo[0];
+var two = foo[1];
 var three = foo[2];
 
 // with destructuring
 var [one, two, three] = foo;
 
-var fruits = ["Banana", "Orange", ["Read Apple","Green Apple"], "Mango"];
+var fruits = ["Banana", "Orange", ["Read Apple", "Green Apple"], "Mango"];
 ```
 
 **Evitar mezclar notación de objetos y arreglos. Los arreglos siempre se manejan por indices númericos**
@@ -622,8 +622,8 @@ var person = [];
 person["firstName"] = "John";
 person["lastName"] = "Doe";
 person["age"] = 46;
-var x = person.length;     // person.length will return 0
-var y = person[0];         // person[0] will return undefined 
+var x = person.length; // person.length will return 0
+var y = person[0]; // person[0] will return undefined
 ```
 
 ## Funciones
@@ -632,8 +632,8 @@ Una función de JavaScript es un bloque de código diseñado para realizar una t
 
 Una definición de función (también llamada declaración de función o declaración de función) consiste en la palabra clave de función, seguida de:
 
--  El nombre de la función.
--  Una lista de parámetros para la función, entre paréntesis y separados por comas.
+- El nombre de la función.
+- Una lista de parámetros para la función, entre paréntesis y separados por comas.
 - Las declaraciones de JavaScript que definen la función, encerradas entre llaves, {...}.
 
 ```js
@@ -652,7 +652,7 @@ function myFunction() {
   // code here CAN use carName
 }
 
-// code here can NOT use carName 		
+// code here can NOT use carName
 ```
 
 ### Funciones anónimas
@@ -660,10 +660,10 @@ function myFunction() {
 Si bien la declaración de función anterior es sintácticamente una declaración, las funciones también se pueden crear mediante una expresión de función cuya característica principal es que puede ser anónima; No tiene que tener un nombre.
 
 ```js
-const square = function(number) { 
-    return number * number 
-}
-var x = square(4) // x gets the value 16
+const square = function (number) {
+  return number * number;
+};
+var x = square(4); // x gets the value 16
 ```
 
 ### Funciones anidadas
@@ -694,7 +694,7 @@ function multiply(a, b = 2) {
 }
 
 multiply(5); // 10
-multiply(5,3); // 15
+multiply(5, 3); // 15
 ```
 
 ### Funciones que reciben funciones como parámetro
@@ -703,15 +703,14 @@ multiply(5,3); // 15
 function map(f, a) {
   let result = []; // Create a new Array
   let i; // Declare variable
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
-const f = function(x) {
-   return x * x * x; 
-}
+const f = function (x) {
+  return x * x * x;
+};
 let numbers = [0, 1, 2, 5, 10];
-let cube = map(f,numbers);
+let cube = map(f, numbers);
 console.log(cube);
 ```
 
@@ -747,62 +746,63 @@ console.log(edades)
 
 ```js
 const flecha = () => {
-    console.log("Hello world")
-}
+  console.log("Hello world");
+};
 
-const mult = (num1,num2) => { return num1*num2}
+const mult = (num1, num2) => {
+  return num1 * num2;
+};
 
-const saludar = nombre => {
-    console.log(`Hola como estas? ${nombre}`)
-}
+const saludar = (nombre) => {
+  console.log(`Hola como estas? ${nombre}`);
+};
 
-flecha()
-console.log(mult(3,4))
-saludar("rhod")
-
+flecha();
+console.log(mult(3, 4));
+saludar("rhod");
 ```
 
-##  Map, Filter y Reduce
+## Map, Filter y Reduce
 
 ### Ejemplo con Sort()
 
 ```js
 var persona1 = {
-	nombre : "Mike",
-	apellido: "Peaterson"
-}
+  nombre: "Mike",
+  apellido: "Peaterson",
+};
 
 var persona2 = {
-	nombre : "Rodrigo",
-	apellido: "Lopez"
-}
+  nombre: "Rodrigo",
+  apellido: "Lopez",
+};
 
 var persona3 = {
-	nombre : "Armando",
-	apellido: "Flores"
-}
+  nombre: "Armando",
+  apellido: "Flores",
+};
 
-var personas = [persona1,persona2,persona3]
+var personas = [persona1, persona2, persona3];
 
-personas.sort((p1,p2) => {
-	const pA = p1.nombre.toUpperCase();
-	const pB = p2.nombre.toUpperCase();
+personas.sort((p1, p2) => {
+  const pA = p1.nombre.toUpperCase();
+  const pB = p2.nombre.toUpperCase();
 
-	let comparison = 0;
-	if (pA > pB) {
-	comparison = 1;
-	} else if (pA < pB) {
-	comparison = -1;
-	}
-	return comparison;
-})
+  let comparison = 0;
+  if (pA > pB) {
+    comparison = 1;
+  } else if (pA < pB) {
+    comparison = -1;
+  }
+  return comparison;
+});
 ```
 
-### Spread 
+### Spread
 
 ```js
-const parts = ['shoulders', 'knees']; 
-const lyrics = ['head', ...parts, 'and', 'toes']; 
+const parts = ["shoulders", "knees"];
+const lyrics = ["head", ...parts, "and", "toes"];
 //  ["head", "shoulders", "knees", "and", "toes"]
 
 const arr2 = [...arr]; // like arr.slice() // copy array
@@ -812,8 +812,8 @@ const arr2 = [...arr]; // like arr.slice() // copy array
 
 ```js
 let numbers = [0, 1, 2, 5, 10];
-numbers.map( num =>{
-	return num*2
+numbers.map((num) => {
+  return num * 2;
 });
 ```
 
@@ -841,14 +841,14 @@ var sonMayores = ages.every(checkAdult);
 ### Reduce
 
 ```js
-var numeros = [1, 2, 3]
+var numeros = [1, 2, 3];
 var total = numeros.reduce(function (sum, current) {
-   console.log(sum,current) 
+  console.log(sum, current);
   return sum + current;
 }, 0);
 
 var total2 = numeros.reduce(function (sum, current) {
-	console.log(sum,current)
+  console.log(sum, current);
   return sum - current;
 });
 ```
